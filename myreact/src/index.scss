@@ -1,0 +1,537 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+  $anchor-bg-color:rgb(169, 164, 164);
+  $horizon-bg-color: rgb(241, 237, 237);
+  $fullWidth: 100%;
+  $Font-sc: 13px;
+  $Font-md:15px;
+  $Font-lg:16px;
+  $Font-xl:17px;
+$Margin-sm:20px;
+$Margin-md:38px;
+
+
+@mixin horizontal {
+  border: 1px solid  $horizon-bg-color;
+  background: $horizon-bg-color;
+}
+
+.nav {
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 105px;
+    height: 75px;
+    background-color: black;
+    li {
+      list-style-type: none;
+      margin: 22px 15px;
+      a {
+        text-decoration: none;
+        color: $anchor-bg-color ;
+        font-size: $Font-xl;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+
+  &__page {
+    font-size: $Font-xl;
+    margin-top: 30px;
+    margin-left: $Margin-md;
+    font-weight: lighter;
+  }
+  &__text {
+    margin-left: 8px;
+    margin-top: 36px;
+    font-size: $Font-md;
+    color: $anchor-bg-color;
+  }
+}
+hr {
+  @include horizontal;
+  margin-top: 10px;
+  margin-left: $Margin-md;
+  margin-right: 108px;
+}
+.container {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    width: 400px;
+    height: 390px;
+    margin-right: 35px;
+    img {
+      width: 100%;
+      height: 280px;
+    }
+    h2 {
+      color: #5c95f0;
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: $Font-xl;
+    }
+  }
+}
+
+.horizon{
+  @include horizontal;
+}
+.copy {
+  font-size: $Font-xl;
+  margin-top: 55px;
+  margin-left: $Margin-md;
+}
+@media screen and (max-width: 360px) {
+
+
+  .nav {
+    ul {
+      display: block;
+      width: $fullWidth;
+      padding-left: 88px;
+      height: 200px;
+      overflow: hidden;
+   
+
+      li {
+        margin: 22px 40px;
+        a {
+          font-size: $Font-sc;
+        }
+      }
+    }
+  }
+  .header {
+    display: flex;
+    width: $fullWidth;
+
+    &__page {
+      font-size: $Font-sc;
+      margin-left: $Margin-sm;
+    }
+    &__text {
+      font-size: 11px;
+      margin-left: 8px;
+    }
+  }
+  hr {
+    width: 90%;
+    margin-left: $anchor-bg-color;
+  }
+  .container {
+    display: block;
+    margin-top: 10px;
+    margin-left:  $anchor-bg-color;
+    margin-bottom: 10px;
+
+    &__box {
+      width: 96%;
+      height: 280px;
+
+      img {
+        width: 96%;
+        height: 160px;
+      }
+      h2 {
+        font-size: $Font-sc;
+        margin-top: 8px;
+        margin-bottom: 6px;
+      }
+      p {
+        font-size: $Font-sc;
+        width: 90%;
+      }
+    }
+  }
+  .horizon {
+    width: 90%;
+    margin-left:  $anchor-bg-color;
+  }
+  .copy {
+    font-size: $Font-sc;
+    margin-top: 25px;
+    margin-left:  $anchor-bg-color;
+  }
+}
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  .nav {
+    ul {
+       display: block;
+      width: $fullWidth;
+      padding-left: 88px;
+      height: 200px;
+      overflow: hidden;
+    
+      li {
+        margin: 22px 109px;
+        a {
+          font-size: $Font-md;
+        }
+      }
+    }
+  }
+  .header {
+    display: flex;
+    width: $fullWidth;
+
+    &__page {
+      font-size:$Font-md ;
+      margin-left:  $anchor-bg-color;
+    }
+    &__text {
+      font-size: 11px;
+      margin-left: 8px;
+      margin-top: 33px;
+    }
+  }
+  hr {
+    width: 98%;
+    margin-left:  $anchor-bg-color;
+  }
+  .container {
+    display: block;
+    margin-top: 10px;
+    margin-left:  $anchor-bg-color;
+    margin-bottom: 10px;
+
+    &__box {
+      width: 96%;
+      height: 310px;
+
+      img {
+        width: 96%;
+        height: 160px;
+      }
+      h2 {
+        font-size:$Font-md ;
+        font-size: 15px;
+        margin-top: 8px;
+        margin-bottom: 6px;
+      }
+      p {
+        font-size: $Font-md;
+        width: 90%;
+      }
+    }
+  }
+  .horizon {
+    width: 98%;
+    margin-left:  $anchor-bg-color;
+  }
+  .copy {
+    font-size: $Font-md;
+    margin-top: 25px;
+    margin-left:  $anchor-bg-color;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .nav{
+     ul {
+    display: flex;
+    width:$fullWidth;
+    padding-left: 25px;
+    height: 60px;
+    overflow: hidden;
+  
+  li {
+    margin: 22px 15px;
+   a {
+    font-size: $Font-lg;
+  }
+}
+     }
+    }
+
+  .header {
+    display: flex;
+    width: $fullWidth;
+  
+   &__page{
+    font-size: $Font-lg;
+    margin-left: $Margin-md;
+  }
+  &__text{
+    font-size: 12px;
+    margin-left: 8px;
+    margin-top: 33px;
+  }
+}
+  hr {
+    width: 96%;
+    margin-left: $Margin-md;
+  }
+  .container {
+    display: flex;
+    width: 98%;
+    margin-top: 10px;
+    margin-left: $Margin-md;
+    margin-bottom: 10px;
+ 
+  &__box {
+    width: 96%;
+    height: 310px;
+    margin-right: 12px;
+  
+  img {
+    width: 96%;
+    height: 160px;
+  }
+  h2 {
+    font-size: $Font-sc;
+    margin-top: 8px;
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: $Font-sc;
+    width: 90%;
+  }
+}
+  }
+  .horizon {
+    width: 96%;
+    margin-left: $Margin-md;
+  }
+  .copy {
+    font-size: $Font-sc;
+    margin-top: 25px;
+    margin-left: $Margin-md;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .nav{
+    ul {
+    display: flex;
+    width: $fullWidth;
+    padding-left: 25px;
+    height: 60px;
+    overflow: hidden;
+
+   li {
+    margin: 22px 15px;
+ a {
+    font-size: $Font-xl;
+  }
+}
+    }
+  }
+
+  .header {
+    display: flex;
+    width: $fullWidth;
+  &__page {
+    font-size:  $Font-xl;
+    margin-left: $Margin-md;
+  }
+  &__text {
+    font-size: $Font-sc;
+    margin-left: 8px;
+    margin-top: 33px;
+  }
+}
+  hr {
+    width: 95%;
+    margin-left:$Margin-md;
+  }
+  .container{
+    display: flex;
+    width: 96%;
+    margin-top: 10px;
+    margin-left: $Margin-md;
+    margin-bottom: 10px;
+
+  
+  &__box {
+    width: 96%;
+    height: 312px;
+    margin-right: 12px;
+  img {
+    width: 96%;
+    height: 180px;
+  }
+  h2 {
+    font-size: $Font-xl;
+    margin-top: 8px;
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: $Font-xl;
+    width: 90%;
+  }
+}
+  }
+
+  .horizon {
+    width: 95%;
+    margin-left: $Margin-md;
+  }
+  .copy {
+    font-size: $Font-lg;
+    margin-top: 25px;
+    margin-left: $Margin-md;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .nav{
+
+   ul {
+    display: flex;
+    width: $fullWidth;
+    padding-left: 25px;
+    height: 60px;
+    overflow: hidden;
+
+  
+   li {
+    margin: 22px 15px;
+  
+  a {
+    font-size: $Font-md;
+  }
+}
+   }
+  }
+
+  .header {
+    display: flex;
+    width: $fullWidth;
+  
+  &__page {
+    font-size: $Font-xl;
+    margin-left: $Margin-md;
+  }
+  &__text {
+    font-size: $Font-xl;
+    margin-left: 8px;
+    margin-top: 33px;
+  }
+}
+  hr {
+    width: 96%;
+    margin-left: $Margin-md;
+  }
+  .container {
+    display: flex;
+    width: 96%;
+    margin-top: 10px;
+    margin-left: $Margin-md;
+    margin-bottom: 10px;
+ 
+  &__box{
+    width: 96%;
+    height: 312px;
+    margin-right: 12px;
+  
+  img {
+    width: 96%;
+    height: 180px;
+  }
+  h2 {
+    font-size: $Font-lg;
+    margin-top: 8px;
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: $Font-lg;
+    width: 90%;
+  }
+}
+  }
+  .horizon {
+    width: 96%;
+    margin-left: $Margin-md;
+  }
+  .copy {
+    font-size: $Font-lg;
+    margin-top: 25px;
+    margin-left: $Margin-md;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .nav
+  {
+     ul {
+    display: flex;
+    width: $fullWidth;
+    padding-left: 25px;
+    height: 60px;
+    overflow: hidden;
+    background-color: black;
+  
+   li {
+    margin: 22px 15px;
+  
+ a {
+    font-size: $Font-xl;
+  }
+}
+     }
+    }
+  .header {
+    display: flex;
+    width: 100%;
+  
+  &__page {
+    font-size: $Font-xl;
+    margin-left: $Margin-md;
+  }
+  &__text {
+    font-size: $Font-md;
+    margin-left: 8px;
+    margin-top: 33px;
+  }
+}
+  hr {
+    width: 96%;
+    margin-left: $Margin-md;
+  }
+  .container {
+    display: flex;
+    width: 96%;
+    margin-top: 20px;
+    margin-left: $Margin-md;
+    margin-bottom: 20px;
+ 
+  &__box{
+    width: 96%;
+    height: 326px;
+    margin-right: 12px;
+
+  img {
+    width: 96%;
+    height: 218px;
+  }
+  h2 {
+    font-size: $Font-xl;
+    margin-top: 8px;
+    margin-bottom: 6px;
+  }
+  p{
+    font-size: $Font-xl;
+    width: 90%;
+  }
+}
+  }
+  .horizon {
+    width: 96%;
+    margin-left: $Margin-md;
+  }
+  .copy {
+    font-size:$Font-xl;
+    margin-top: 25px;
+    margin-left: $Margin-md;
+  }
+}
